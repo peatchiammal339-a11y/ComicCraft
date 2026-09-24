@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft - AI Story Creator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎨 ComicCraft</h1>
+
+        <p class="subtitle">
+            AI Comic Story Creator using Gemini
+        </p>
+
+        <div class="card">
+
+            <label for="storyIdea">
+                Enter your story idea
+            </label>
+
+            <textarea
+                id="storyIdea"
+                placeholder="Example: A young girl discovers a magical forest..."
+            ></textarea>
+
+            <button onclick="generateStory()">
+                ✨ Generate Comic Story
+            </button>
+
+            <div id="loading">
+                Creating your story...
+            </div>
+
+            <div id="result">
+                <h2>📖 Your Comic Story</h2>
+                <p id="story"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
